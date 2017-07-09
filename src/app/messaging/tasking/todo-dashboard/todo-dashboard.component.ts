@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgRedux, select } from 'ng2-redux';
+import { NgRedux, select } from '@angular-redux/store';
 import { CLEAR_TODOS } from '../actions';
 import {IAppState} from "../../../store";
 

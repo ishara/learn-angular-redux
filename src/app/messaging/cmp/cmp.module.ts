@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from "@angular/common";
-import {NgReduxModule} from "ng2-redux";
+import {NgReduxModule} from '@angular-redux/store';
 
 import {CompanyComponent} from "./company/company.component";
 import {FormsModule} from "@angular/forms";

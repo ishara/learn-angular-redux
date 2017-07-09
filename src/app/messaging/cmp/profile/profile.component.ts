@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ICMPState} from "../cmp-store";
-import {NgRedux, select} from "ng2-redux";
+import {NgRedux, select} from '@angular-redux/store';
 
 @Component({
   selector: 'app-profile',

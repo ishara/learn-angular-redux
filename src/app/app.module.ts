@@ -2,7 +2,7 @@ import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
-import {NgRedux, NgReduxModule} from "ng2-redux";
+import {NgRedux, NgReduxModule} from '@angular-redux/store';
 
 import {AppComponent} from "./app.component";
 import {INITIAL_STATE, rootReducer} from "./store";

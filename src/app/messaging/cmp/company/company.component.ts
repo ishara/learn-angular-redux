@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CMP_ACTION_COMPANY_SELECTED, ICMPState} from "../cmp-store";
-import {NgRedux} from "ng2-redux";
+import {NgRedux} from '@angular-redux/store';
 
 @Component({
   selector: 'app-company',
