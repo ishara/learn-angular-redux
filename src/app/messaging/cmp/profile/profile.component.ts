@@ -9,7 +9,8 @@ import {NgRedux, select} from '@angular-redux/store';
 })
 export class ProfileComponent implements OnInit {
   @select(s => s.cmpProfile.lastUpdate) lastUpdate;
-  @select(s => s.cmpProfile.company.nameCode.name) company;
+  // @select(s => s.cmpProfile.company.nameCode) company;
+  @select(['cmpProfile', 'company', 'nameCode','name']) company;
 
   constructor(private ngRedux: NgRedux<ICMPState>) {
   }
