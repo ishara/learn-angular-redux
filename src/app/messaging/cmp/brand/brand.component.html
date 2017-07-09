@@ -1,0 +1,6 @@
+
+<h1>Brand</h1>
+<select type="number" [(ngModel)]="levelNum" (ngModelChange)="toNumber()">
+  <option *ngFor="let level of levels" [ngValue]="level.num">{{level.name}}</option>
+</select>
+{{levelNum}}

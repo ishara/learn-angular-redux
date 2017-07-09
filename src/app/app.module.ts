@@ -9,6 +9,7 @@ import {INITIAL_STATE, rootReducer} from "./store";
 
 import {MessagingModule} from "./messaging/messaging.module";
 import {TodosModule} from "./messaging/tasking/todos.module";
+import {CMPModule} from "./messaging/cmp/cmp.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {TodosModule} from "./messaging/tasking/todos.module";
     HttpModule,
     NgReduxModule,
     TodosModule,
-    MessagingModule
+    MessagingModule,
+    CMPModule
   ],
   bootstrap: [AppComponent]
 })
