@@ -1,8 +1,8 @@
 import {BrowserModule} from "@angular/platform-browser";
-import {NgModule} from "@angular/core";
+import { isDevMode, NgModule } from "@angular/core";
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
-import {NgRedux, NgReduxModule} from "ng2-redux";
+import { DevToolsExtension, NgRedux, NgReduxModule } from "ng2-redux";
 
 import {AppComponent} from "./app.component";
 import {INITIAL_STATE, rootReducer} from "./store";
@@ -27,7 +27,8 @@ import {CMPModule} from "./messaging/cmp/cmp.module";
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(ngRedux: NgRedux<any>){
-    ngRedux.configureStore(rootReducer, INITIAL_STATE);
+  constructor(ngRedux: NgRedux<any>,devTool: DevToolsExtension){
+    let enhancers = isDevMode() ? devTool.enhancer():[];
+    ngRedux.configureStore(rootReducer, INITIAL_STATE,[],enhancers);
   }
 }
