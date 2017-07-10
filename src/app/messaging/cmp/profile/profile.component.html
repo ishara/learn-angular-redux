@@ -3,7 +3,14 @@
 <p>
   Last Update: {{ (lastUpdate | async) | date:'mediumTime' }}
 </p>
-
 <p>
-  Company: {{ (company ) | async  }}
+  <button (click)="userDefault()" >User Default</button>
 </p>
+<p>
+  Company: {{ ((cmpProfile ) | async).company.nameCode.code }}
+  Division: {{ ((cmpProfile ) | async).division.nameCode.code }}
+  Brand: {{ ((cmpProfile ) | async).brand.nameCode.code }}
+  <!--Company: {{ (company ) | async  }}-->
+</p>
+
+
